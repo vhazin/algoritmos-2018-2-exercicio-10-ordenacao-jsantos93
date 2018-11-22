@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void bubblesort(char *s[100], int n);
+void bubblesort(char s[][20], int n);
 
 int main()
 {
@@ -28,17 +28,16 @@ int main()
     {
         printf("%s\n", children_list[i]);
     }
-    printf("%d\n", counter);
+    printf("Se comportaram: %d | Nao se comportaram: %d\n", counter, num_name - counter);
 
     return 0;
 }
 
-void bubblesort(char *s[100], int n)
+void bubblesort(char s[][20], int n)
 {
     int i, j, cmp;
     char tmp[1][20];
 
-    //bubble sorting of words
     for (i = 0; i < n; i++)
         for (j = 0; j < n - 1; j++)
         {
